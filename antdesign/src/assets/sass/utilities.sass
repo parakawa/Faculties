@@ -1,0 +1,25 @@
+@for $i from 8 through 20
+    &.fz-#{$i}
+        font-size: $i + px
+
+$incrementValue: 4
+@for $i from 0 through 80
+    &.mr-#{$i + $incrementValue}
+        margin-right: $i + $incrementValue + px
+    &.ml-#{$i + $incrementValue}
+        margin-left: $i + $incrementValue + px
+    &.mt-#{$i + $incrementValue}
+        margin-top: $i + $incrementValue + px
+    &.mb-#{$i + $incrementValue}
+        margin-bottom: $i + $incrementValue + px
+
+
+@for $i from -4 through 80
+    &.pr-#{$i + $incrementValue}
+        padding-right: $i + $incrementValue + px
+    &.pl-#{$i + $incrementValue}
+        padding-left: $i + $incrementValue + px
+    &.pt-#{$i + $incrementValue}
+        padding-top: $i + $incrementValue + px
+    &.pb-#{$i + $incrementValue}
+        padding-bottom: $i + $incrementValue + px
