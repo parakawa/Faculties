@@ -1,6 +1,6 @@
 <template lang="pug">
     .formNewCareer
-        h1 Nueva Carrera
+        h1 Nueva Carrera Ant Design
         a-row.mt-30
             a-col(:md="12")
                 .flex
@@ -30,7 +30,6 @@
                         size="small"
                         optionLabelProp="name"
                         v-model="course"
-                        
                         )
                         //a-select-option(v-for="item in data1" :key="item.id")  {{item.name}}
                         template(slot="data1")

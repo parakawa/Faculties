@@ -1,6 +1,6 @@
 <template lang="pug">
     .formNewCareer
-        h1 Nueva Carrera
+        h1 Nueva Carrera IView
         row.mt-30
             i-col(:md="12")
                 .flex
@@ -23,14 +23,14 @@
                 div
                     tag(v-for="course in courses" :key="course.id" :name="course" closable color="primary" @on-close="handleClose") {{ course.name }}
                 div
-                    AutoComplete(
+                    auto-complete(
                         v-model="course"
                         placeholder="Agregar curso a ciclo" 
                         @on-select="addCourse"
                         size="small"
                         label="name"
                         )
-                        Option(v-for="item in data1" :key="item.id" :value="item") 
+                        i-option(v-for="item in data1" :key="item.id" :value="item") 
                             span {{item.name}}
         .container-buttons
             i-button.btn(shape="circle" type="primary") Guardar
