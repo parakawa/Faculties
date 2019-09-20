@@ -31,8 +31,13 @@
                         size="small"
                         )
         .container-buttons
-            el-button.btn(shape="circle" type="primary") Guardar
+            el-button.btn(shape="circle" type="primary" @click="save") Guardar
             el-button.btn(shape="circle") Cancelar
+        .summary(v-if="showSummary")
+            h2 Resumen: 
+            p Nombre: {{ name }}
+            p Código: {{ code }}
+            p Facultad: {{ facultie }}
 </template>
 
 <script>
@@ -75,6 +80,7 @@
                     }
                 ],
                 courses: [],  
+                showSummary: false
             }
         },
         methods: {
@@ -110,6 +116,9 @@
                 this.courses.splice(index, 1)
                 this.coursesSelected.push(item)
                 this.course = null
+            },
+            save() {
+                this.showSummary = true
             }
         },
         mounted() {
