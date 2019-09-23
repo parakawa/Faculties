@@ -4,7 +4,8 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "nuxt"
+		"start": "nuxt",
+		"test": "jest"
 	},
 	"keywords": [],
 	"author": "TiSmart",

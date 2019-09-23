@@ -31,13 +31,14 @@
                         size="small"
                         )
         .container-buttons
-            el-button.btn(shape="circle" type="primary" @click="save") Guardar
+            el-button.btn.btn-save(shape="circle" type="primary" @click="save") Guardar
             el-button.btn(shape="circle") Cancelar
         .summary(v-if="showSummary")
             h2 Resumen: 
             p Nombre: {{ name }}
             p Código: {{ code }}
             p Facultad: {{ facultie }}
+        .message Hola Test
 </template>
 
 <script>
