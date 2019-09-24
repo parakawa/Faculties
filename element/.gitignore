@@ -60,6 +60,7 @@ dist
 node_modules
 docs/_book
 test/
+coverage
 
 #vscode
 .vscode

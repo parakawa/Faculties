@@ -35,7 +35,7 @@
             el-button.btn(shape="circle") Cancelar
         .summary(v-if="showSummary")
             h2 Resumen: 
-            p Nombre: {{ name }}
+            p.p-name Nombre: {{ name }}
             p Código: {{ code }}
             p Facultad: {{ facultie }}
         .message Hola Test
