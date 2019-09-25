@@ -1,17 +1,22 @@
 import { shallowMount, createLocalVue } from "@vue/test-utils"
 import FormSubmitter from "~/src/pages/index.vue"
 import Vue from 'vue';
-import ElementUI from 'element-ui';
+import Vuetify from 'vuetify';
+import { removeAllListeners } from "cluster";
 
-Vue.use(ElementUI)
+Vue.use(Vuetify)
 
 const localVue = createLocalVue()
 
-describe("Datos de la facultad en Element", () => {
-    let wrapper
+describe("Datos de la facultad en vuetify", () => {
+    let wrapper, vuetify
+    vuetify = new Vuetify()
 
     beforeEach(() => {
-        wrapper = shallowMount(FormSubmitter)
+        wrapper = shallowMount(FormSubmitter, {
+            vuetify,
+            localVue
+        })
     })
 
     it("has the expected html structure", () => {
@@ -19,7 +24,7 @@ describe("Datos de la facultad en Element", () => {
     })
 
     it("has the expected input element", () => {
-        expect(wrapper.contains('.input-code')).toBe(true)
+        expect(wrapper.contains('.input-name')).toBe(true)
     })
 
     it("reveals a notification when submitted", () => {
