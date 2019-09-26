@@ -5,7 +5,7 @@
             v-col(:md="12")
                 .flex
                     label Nombre
-                    v-text-field.input-name(v-model="name")
+                    v-text-field(id="input-name" v-model="name")
         v-row.mt-30
             v-col(:md="12")
                 .flex
@@ -31,11 +31,11 @@
         //-                 size="small"
         //-                 )
         .container-buttons
-            v-btn.btn-save(color="error" @click="save") Guardar
+            v-btn.btn-save(id="btn-save" color="error" @click="save") Guardar
             //v-btn.btn(shape="circle") Cancelar
         .summary(v-if="showSummary")
             h2 Resumen: 
-            p.p-name Nombre: {{ name }}
+            p.p-name(id="p-name") Nombre: {{ name }}
             p Código: {{ code }}
             //p Facultad: {{ facultie }}
         .message Hola Test
@@ -81,7 +81,7 @@
                     }
                 ],
                 courses: [],  
-                showSummary: false
+                showSummary: true
             }
         },
         methods: {
