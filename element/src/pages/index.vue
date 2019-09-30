@@ -5,7 +5,7 @@
             el-col(:md="12")
                 .flex
                     label Nombre
-                    input.input-name(v-model="name")
+                    el-input.input-name(v-model="name")
         el-row.mt-30
             el-col(:md="12")
                 .flex
@@ -31,7 +31,7 @@
                         size="small"
                         )
         .container-buttons
-            button.btn.btn-save(shape="circle" type="primary" @click="save") Guardar
+            el-button.btn.btn-save(shape="circle" type="primary" @click="save") Guardar
             el-button.btn(shape="circle") Cancelar
         .summary(v-if="showSummary")
             h2 Resumen: 

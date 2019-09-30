@@ -29,25 +29,17 @@ describe("Datos de la facultad en vuetify", () => {
     })
 
     it("reveals a notification when submitted", () => {
-        const name = wrapper.find("input#input-name")[0]
+        const name = wrapper.find(".input-name")[0]
         console.log('input-name', name)
         name.trigger('focus')
         name.element.value = 'Matematica'
         name.trigger('input')
         console.log('value del elemento después del set', name.element.value)
+        console.log('wrapper.vm.name', wrapper.vm.name)
         expect(wrapper.vm.name).toEqual('Matematica')
-        wrapper.find("button#btn-save")[0].trigger("click")
-        console.log('functions disponibles', wrapper.find("p#p-name"))
-        expect(wrapper.find("p#p-name")[0].text())
+        wrapper.find(".btn-save")[0].trigger("click")
+        console.log('functions disponibles', wrapper.find(".p-name")[0])
+        expect(wrapper.find(".p-name")[0].text())
         .toBe("Nombre: Matematica")
     })
 })
-
-// describe('Foo', () => {
-//     it('Muestra el mensaje', () => {
-//         const wrapper = shallowMount(FormSubmitter)
-    
-//         // see if the message renders
-//         expect(wrapper.find('.message').text()).toEqual('Hola Test')
-//     })
-// })
