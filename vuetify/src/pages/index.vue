@@ -5,12 +5,12 @@
             v-col(:md="12")
                 .flex
                     label Nombre
-                    v-text-field(id="input-name" v-model="name")
-        v-row.mt-30
-            v-col(:md="12")
-                .flex
-                    label Código
-                    v-text-field.input-code(v-model="code")
+                    v-text-field.input-name(id="input-name" v-model="name")
+        //- v-row.mt-30
+        //-     v-col(:md="12")
+        //-         .flex
+        //-             label Código
+        //-             v-text-field.input-code(v-model="code")
             //- v-col(:md="12")
             //-     .flex
             //-         label.ml-40 Facultad
@@ -36,7 +36,7 @@
         .summary(v-if="showSummary")
             h2 Resumen: 
             p.p-name(id="p-name") Nombre: {{ name }}
-            p Código: {{ code }}
+            //p Código: {{ code }}
             //p Facultad: {{ facultie }}
         .message Hola Test
 </template>
@@ -81,7 +81,7 @@
                     }
                 ],
                 courses: [],  
-                showSummary: true
+                showSummary: false
             }
         },
         methods: {
